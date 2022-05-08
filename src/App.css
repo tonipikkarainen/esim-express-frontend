@@ -1,0 +1,21 @@
+html, body, #root {
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgb(221, 214, 237);
+  }
+
+  .formFields {
+      background-color: rgb(183, 177, 198);
+      padding: 64px;
+  }
+
+  input {
+      margin-left: 10px;
+  }

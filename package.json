@@ -2,7 +2,6 @@
   "name": "esim-frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://esim-express-backend.herokuapp.com/",
   "homepage": "https://tonipikkarainen.github.io/esim-express-frontend",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
