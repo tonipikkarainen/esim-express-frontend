@@ -3,9 +3,10 @@ import React, {useEffect, useState } from 'react';
 
 function App() {
   const [backendData, setBackendData] = useState([{}]);
+  const host = process.env.REACT_APP_API_URI;
 
   const getResponse = (id) => {
-    fetch("/api/" + id)
+    fetch(host + "api/" + id)
     .then(resp => {
       return resp.json();
     })
