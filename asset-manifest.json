@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/esim-express-frontend/static/css/main.e6c13ad2.css",
-    "main.js": "/esim-express-frontend/static/js/main.5cef3918.js",
+    "main.css": "/esim-express-frontend/static/css/main.fdf39d9b.css",
+    "main.js": "/esim-express-frontend/static/js/main.c160f917.js",
     "static/js/787.875f23a3.chunk.js": "/esim-express-frontend/static/js/787.875f23a3.chunk.js",
     "index.html": "/esim-express-frontend/index.html",
-    "main.e6c13ad2.css.map": "/esim-express-frontend/static/css/main.e6c13ad2.css.map",
-    "main.5cef3918.js.map": "/esim-express-frontend/static/js/main.5cef3918.js.map",
+    "main.fdf39d9b.css.map": "/esim-express-frontend/static/css/main.fdf39d9b.css.map",
+    "main.c160f917.js.map": "/esim-express-frontend/static/js/main.c160f917.js.map",
     "787.875f23a3.chunk.js.map": "/esim-express-frontend/static/js/787.875f23a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.5cef3918.js"
+    "static/css/main.fdf39d9b.css",
+    "static/js/main.c160f917.js"
   ]
 }
