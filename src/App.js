@@ -1,9 +1,11 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function App() {
     const [backendData, setBackendData] = useState([{}]);
     const [input, setInput] = useState("");
+    const [waitingResponse, setWaitingResponse] = useState(false);
     const host = process.env.REACT_APP_API_URI;
 
     const handleChange = (e) => {
@@ -17,6 +19,7 @@ function App() {
     };
 
     const getResponse = (id) => {
+        setWaitingResponse(true);
         fetch(host + "api/" + id)
             .then((resp) => {
                 return resp.json();
@@ -24,6 +27,7 @@ function App() {
             .then((data) => {
                 console.log(data);
                 setBackendData(data);
+                setWaitingResponse(false);
             })
             .catch((err) => console.log(err));
     };
@@ -31,15 +35,22 @@ function App() {
     return (
         <div className="App">
             <div className="formFields">
-                <header className="App-header">
-                    <p>{backendData.message}</p>
-                </header>
+                {waitingResponse && <CircularProgress />}
+                {!waitingResponse && (
+                    <header className="App-header">
+                        <p>{backendData.message}</p>
+                    </header>
+                )}
                 <form onSubmit={handleSubmit}>
                     <label>
                         Arvaa numero väliltä 0 - 9:
                         <input value={input} onChange={handleChange} />
                     </label>
-                    <input type="submit" value="Lähetä" />
+                    <input
+                        type="submit"
+                        value="Lähetä"
+                        disabled={waitingResponse}
+                    />
                 </form>
             </div>
         </div>
