@@ -43,7 +43,7 @@ function App() {
                 )}
                 <form onSubmit={handleSubmit}>
                     <label>
-                        Arvaa numero väliltä 0 - 9:
+                        Arvaappa numero väliltä 0 - 9:
                         <input value={input} onChange={handleChange} />
                     </label>
                     <input
